@@ -1,0 +1,17 @@
+.page__main__tips {
+  background-color: aqua;
+  display: block;
+  padding: 15px 30px 45px 15px;
+
+  @media all and (min-width: 1200px) {
+    // padding: 60px 275px 60px 275;
+    max-width: 730px;
+    margin: 0 auto; /*centra respecto al contenedor*/
+  }
+}
+.page__main__reasons {
+  background-color: blueviolet;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
