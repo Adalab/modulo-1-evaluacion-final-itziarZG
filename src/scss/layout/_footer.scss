@@ -19,18 +19,18 @@
   @media all and (min-width: 1200px) {
     padding: 45px 370px;
   }
-  &__icon {
-    position: absolute;
-    top: -22px; /*mitad del diametro*/
-    left: calc(50% - 22px);
-    width: 45px;
-    height: 45px;
+  &__button {
+    background-color: #f3f4f5;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 45px;
+    height: 45px;
     border-radius: 25px;
-    box-shadow: 0 2px 4px 0 $color-black;
-    background-color: white;
+    box-shadow: 0 2px 4px 0 $color-black-50;
+    position: absolute;
+    top: -22px;
+    left: calc(50% - 22px);
   }
   &__menu,
   &__social-menu {

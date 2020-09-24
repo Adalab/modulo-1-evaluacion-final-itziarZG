@@ -71,7 +71,7 @@
 
     & a {
       color: $color-bright-orange;
-      transform: color 1s ease;
+      transition: color 1s ease;
     }
     &:hover {
       background-color: $color-bright-orange;

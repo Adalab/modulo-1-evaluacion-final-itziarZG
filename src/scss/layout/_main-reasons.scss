@@ -66,6 +66,10 @@
     line-height: 2.25;
     border-radius: 22.5px;
     text-align: center;
+    &:hover {
+      box-shadow: 0 4px 16px #0271bc;
+      transition: box-shadow 0.2s ease;
+    }
     @media all and (min-width: 768px) {
       grid-area: button;
       width: 210px;
