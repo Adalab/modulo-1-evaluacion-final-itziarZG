@@ -1,6 +1,50 @@
 .page__footer {
-  background-color: brown;
+  height: 465px;
+  background-color: $color-dark-grey-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 60px 15px 45px 15px;
+
   @media all and (min-width: 1200px) {
     padding: 45px 370px;
   }
+  &__icon {
+    position: absolute;
+    top: -22px; /*mitad del diametro*/
+    left: calc(50%-22) px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px 0 $color-black;
+    background-color: white;
+  }
+  &__menu,
+  &__social-menu {
+    font-family: $font-main;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__menu__item {
+    list-style-type: none;
+    line-height: 0;
+    margin: -15px 0;
+  }
+  &__copy {
+    font-family: $font-main;
+    color: white;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+  }
+}
+.heart {
+  color: $color-bright-orange;
 }
