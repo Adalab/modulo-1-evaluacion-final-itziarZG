@@ -1,0 +1,77 @@
+.page__main__reasons {
+  padding: 30px 15px 60px 15px;
+  background-color: $color-ice-blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr, 3fr, 3fr, 3fr, 3fr;
+  grid-template-areas: "title" "first" "second" "third" "button";
+  justify-items: center;
+  row-gap: 45px;
+
+  @media all and (min-width: 768px) {
+    grid-template-columns: auto auto auto;
+    grid-area: auto auto auto;
+    grid-template-areas: "title title title" "item1 item2 item3" "button button button";
+    column-gap: 27.5px;
+  }
+  @media all and (min-width: 1200px) {
+    padding: 60px 80px 60px 81px;
+  }
+  &__h2 {
+    font-family: $font-titles;
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-black;
+
+    @media all and (min-width: 768px) {
+      font-size: 26px;
+      grid-area: title;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 32px;
+    }
+  }
+  &__item {
+    width: 180px;
+    text-align: center;
+
+    @media all and (min-width: 768px) {
+      width: 100%;
+    }
+    & h3 {
+      font-family: $font-titles;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.67;
+      @media all and (min-width: 768px) {
+        font-size: 24px;
+      }
+    }
+    & p {
+      font-family: $font-main;
+      font-size: 18px;
+      line-height: 1.67;
+      @media all and (min-width: 768px) {
+        font-size: 20px;
+      }
+    }
+  }
+  &__button {
+    font-size: 20px;
+    font-family: $font-main;
+    color: $color-white;
+    background-color: $color-bright-orange;
+    width: 184px;
+    height: 45px;
+    line-height: 2.25;
+    border-radius: 22.5px;
+    text-align: center;
+    @media all and (min-width: 768px) {
+      grid-area: button;
+      width: 210px;
+    }
+    @media all and (min-width: 1200px) {
+      width: 255px;
+    }
+  }
+}

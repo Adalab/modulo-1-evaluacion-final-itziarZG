@@ -8,13 +8,21 @@
   position: relative;
   padding: 60px 15px 45px 15px;
 
+  @media all and (min-width: 768px) {
+    padding: 45px 39px;
+    height: 240px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
   @media all and (min-width: 1200px) {
     padding: 45px 370px;
   }
   &__icon {
     position: absolute;
     top: -22px; /*mitad del diametro*/
-    left: calc(50%-22) px;
+    left: calc(50% - 22px);
     width: 45px;
     height: 45px;
     display: flex;
@@ -30,6 +38,10 @@
     color: white;
     font-size: 16px;
     text-align: center;
+    @media all and (min-width: 768px) {
+      text-align: left;
+      padding-left: -20px;
+    }
   }
   &__menu__item {
     list-style-type: none;
@@ -40,9 +52,14 @@
     font-family: $font-main;
     color: white;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 2.14;
     text-align: center;
     display: block;
+    @media all and (min-width: 768px) {
+      order: -1;
+      text-align: left;
+      line-height: 1.5;
+    }
   }
 }
 .heart {

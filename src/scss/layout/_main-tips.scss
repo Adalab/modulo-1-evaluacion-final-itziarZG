@@ -1,0 +1,83 @@
+.page__main__tips {
+  display: block;
+  padding: 30px 15px 45px 15px;
+
+  @media all and (min-width: 768px) {
+    padding: 30px 39px 60px 39px;
+  }
+
+  @media all and (min-width: 1200px) {
+    max-width: 730px;
+    padding: 60px 0;
+    margin: 0 auto; /*centra respecto al contenedor. los 275margenes lados*/
+  }
+  & h4 {
+    font-family: $font-main;
+    font-size: 14px;
+    line-height: 30px;
+    color: $color-light-blue;
+    @media all and (min-width: 1200px) {
+      font-size: 16px;
+    }
+  }
+  & h2 {
+    font-family: $font-titles;
+    font-size: 24px;
+    line-height: 30px;
+    color: $color-black;
+    @media all and (min-width: 768px) {
+      font: size 26px;
+    }
+    @media all and (min-width: 1200px) {
+      font-size: 32px;
+    }
+  }
+  & p {
+    font-family: $font-main;
+    font-size: 18px;
+    line-height: 1.67;
+    color: $color-greyish-brown;
+    width: 290px;
+    padding: 15px 0 30px 0;
+
+    @media all and (min-width: 768px) {
+      font-size: 20px;
+      width: 690px;
+      line-height: 1.5;
+      padding-right: 20px; /* el salto de linea no corresponde con zeplin*/
+    }
+    @media all and (min-width: 1200px) {
+      width: 730px;
+      padding-right: 0; /*aquí si cuadra el salto linea con size y width*/
+    }
+  }
+  &__button {
+    width: 76px;
+    height: 45px;
+    border: 2px solid $color-bright-orange;
+    border-radius: 22.5px;
+    text-align: center;
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 500; /*afecta??*/
+    transition: background-color 1s ease;
+
+    @media all and (min-width: 768px) {
+      width: 91px;
+    }
+    @media all and (min-width: 1200px) {
+      width: 160px;
+    }
+
+    & a {
+      color: $color-bright-orange;
+      transform: color 1s ease;
+    }
+    &:hover {
+      background-color: $color-bright-orange;
+      & a {
+        color: $color-black;
+      }
+    }
+  }
+}
