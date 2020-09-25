@@ -1,4 +1,4 @@
-.page__main__tips {
+.main__tips {
   display: block;
   padding: 30px 15px 45px 15px;
 
@@ -11,16 +11,17 @@
     padding: 60px 0;
     margin: 0 auto; /*centra respecto al contenedor. los 275margenes lados*/
   }
-  & h4 {
+  &__info {
     font-family: $font-main;
     font-size: 14px;
     line-height: 30px;
     color: $color-light-blue;
+
     @media all and (min-width: 1200px) {
       font-size: 16px;
     }
   }
-  & h2 {
+  &__title {
     font-family: $font-titles;
     font-size: 24px;
     line-height: 30px;
@@ -32,7 +33,7 @@
       font-size: 32px;
     }
   }
-  & p {
+  &__text {
     font-family: $font-main;
     font-size: 18px;
     line-height: 1.67;
@@ -59,7 +60,7 @@
     text-align: center;
     font-family: $font-main;
     font-size: 20px;
-    font-weight: 500; /*afecta??*/
+    font-weight: 500; /*afecta?? no*/
     transition: background-color 1s ease;
 
     @media all and (min-width: 768px) {
