@@ -27,11 +27,34 @@
     width: 45px;
     height: 45px;
     border-radius: 25px;
-    box-shadow: 0 2px 4px 0 $color-black-50;
     position: absolute;
-    top: -22px;
     left: calc(50% - 22px);
+    top: -22px;
+    animation-name: botiboti;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
+  @keyframes botiboti {
+    0% {
+      box-shadow: 0 2px 4px 0 $color-black-50;
+      top: -22px;
+    }
+    40% {
+      box-shadow: 0 2px 20px 0 $color-black-50;
+      top: -32px;
+    }
+
+    70% {
+      box-shadow: 0 2px 40px 0 $color-black-50;
+    }
+
+    100% {
+      box-shadow: 0 2px 4px 0 $color-black-50;
+      top: -22px;
+    }
+  }
+
   &__menu,
   &__social-menu {
     font-family: $font-main;
@@ -51,8 +74,11 @@
   }
   &__menu__item {
     list-style-type: none;
-    line-height: 0;
     margin: -15px 0;
+    &:hover,
+    &:active {
+      text-shadow: 1px 1px 1px $color-bright-orange;
+    }
   }
   &__copy {
     font-family: $font-main;

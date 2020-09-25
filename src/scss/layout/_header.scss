@@ -10,6 +10,8 @@
   justify-content: flex-end;
   align-items: center;
 
+  overflow: hidden; /*para el efecto en 768*/
+
   &__title {
     font-family: $font-titles;
     font-size: 42px;
@@ -18,6 +20,11 @@
     text-align: center;
     color: $color-white;
     line-height: 1.31;
+    animation-duration: 2s;
+    animation-name: intro;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
     @media all and (min-width: 768px) {
       font-size: 80px;
       line-height: 1.33;
@@ -26,6 +33,18 @@
     @media all and (min-width: 1200px) {
       font-size: 100px;
       max-width: 730px;
+    }
+
+    @keyframes intro {
+      from {
+        transform: scale(10) rotate(-150deg);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   }
   &__text {
