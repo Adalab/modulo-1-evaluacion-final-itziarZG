@@ -1,14 +1,18 @@
 .main__reasons {
   padding: 30px 15px 60px 15px;
   background-color: $color-ice-blue;
+
+  /*GRID*/
+  /*1 columna y 5 filas*/
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr, 3fr, 3fr, 3fr, 3fr;
+  grid-template-rows: 1fr, 3fr, 3fr, 3fr, 3fr; /*primera fila título más pequeña */
   grid-template-areas: "title" "first" "second" "third" "button";
-  justify-items: center;
   row-gap: 45px;
+  justify-items: center; /*Centrado en la columna*/
 
   @media all and (min-width: 768px) {
+    /*GRID de 3 columnas y 3 filas, incluyo título y botón*/
     grid-template-columns: auto auto auto;
     grid-area: auto auto auto;
     grid-template-areas: "title title title" "item1 item2 item3" "button button button";
@@ -17,6 +21,8 @@
   @media all and (min-width: 1200px) {
     padding: 60px 80px 60px 81px;
   }
+
+  /*TÍTULO*/
   &__title {
     font-family: $font-titles;
     font-size: 24px;
@@ -31,6 +37,8 @@
       font-size: 32px;
     }
   }
+
+  /*CADA ITEM*/
   &__item {
     width: 180px;
     text-align: center;
@@ -38,6 +46,7 @@
     @media all and (min-width: 768px) {
       width: 100%;
     }
+    /*TÍTULO DEL ITEM*/
     &__title {
       font-family: $font-titles;
       font-size: 18px;
@@ -47,6 +56,7 @@
         font-size: 24px;
       }
     }
+    /*TEXTO DEL ITEM*/
     &__text {
       font-family: $font-main;
       font-size: 18px;
@@ -54,35 +64,6 @@
       @media all and (min-width: 768px) {
         font-size: 20px;
       }
-    }
-  }
-  &__button {
-    font-size: 20px;
-    font-family: $font-main;
-    color: $color-white;
-    background-color: $color-bright-orange;
-    width: 184px;
-    height: 45px;
-    line-height: 2.25;
-    border-radius: 22.5px;
-    text-align: center;
-    background-image: linear-gradient($color-white, $color-white);
-    background-position: 50% 70%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: all 0.5s ease;
-
-    &:hover,
-    &:focus {
-      box-shadow: 0 4px 16px #0271bc;
-      background-size: 70% 2px;
-    }
-    @media all and (min-width: 768px) {
-      grid-area: button;
-      width: 210px;
-    }
-    @media all and (min-width: 1200px) {
-      width: 255px;
     }
   }
 }

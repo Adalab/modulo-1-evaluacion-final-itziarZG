@@ -1,15 +1,17 @@
 .hero {
+  /*imagen de fondo con gradiente desde abajo*/
   background-image: url("../images/cover.jpg"),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, #cccccc);
   background-position: top center;
   background-size: cover;
-  background-blend-mode: multiply;
-  height: 100vh;
+  background-blend-mode: multiply; /* para el gradiente*/
+  height: 100vh; /*Petición que ocupe todo el alto de pantalla*/
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-end; /*item parte baja de la imagen*/
   align-items: center;
 
+  /*título*/
   &__title {
     font-family: $font-titles;
     font-size: 42px;
@@ -29,13 +31,14 @@
       max-width: 730px;
     }
   }
+
+  /*frase debajo del título*/
   &__text {
     font-family: $font-main;
     font-size: 16px;
-    // font-weight: normal; quería quitar el bold por defecto del h3 pero no se nota dif con esta tipo
     color: $color-white;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 10px; /*separación con el título */
 
     @media all and (min-width: 768px) {
       font-size: 24px;

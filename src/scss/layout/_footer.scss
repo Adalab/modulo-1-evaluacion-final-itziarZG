@@ -11,7 +11,7 @@
   @media all and (min-width: 768px) {
     padding: 45px 0px;
     height: 240px;
-    flex-direction: row;
+    flex-direction: row; /*a partir de tablet cambia a una fila*/
     align-items: flex-start;
     justify-content: space-evenly;
   }
@@ -20,10 +20,10 @@
     padding: 45px 370px;
   }
 
+  /*MENUS NAV*/
   &__menu,
   &__social-menu {
     font-family: $font-main;
-    // color: white;
     list-style-type: none;
     font-size: 16px;
     text-align: center;
@@ -33,18 +33,24 @@
       padding-left: -20px;
     }
   }
+
   &__menu {
     width: 161px;
     padding: 0 30px;
   }
+
   &__menu__item {
     list-style-type: none;
     margin: -15px 0;
+
+    /*pequeño efecto sobre los links*/
     &:hover,
     &:active {
       text-shadow: 1px 1px 1px $color-bright-orange;
     }
   }
+
+  /*COPY*/
   &__copy {
     font-family: $font-main;
     color: white;
@@ -52,6 +58,7 @@
     line-height: 2.14;
     text-align: center;
     display: block;
+
     @media all and (min-width: 768px) {
       order: -1;
       margin-left: -70px;

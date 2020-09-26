@@ -1,4 +1,7 @@
+/*BOTÓN SECCIÓN HERO*/
+
 .hero__button {
+  /*botón blanco con flecha hacia abajo importada*/
   background-color: $color-white;
   background-image: url(../images/ico-scroll-down.svg);
   background-position: center center;
@@ -8,11 +11,84 @@
   min-height: 45px; /* para altura pequeñas se deforma*/
   border-radius: 25px;
   margin: 45px 0 53px 0;
+
   @media all and (min-width: 768px) {
     margin: 30px 0 45px 0;
   }
   @media all and (min-width: 1200px) {
     margin-bottom: 13px;
+  }
+}
+
+/*BOTÓN SECCIÓN WINDOW*/
+.main__tips__button {
+  width: 76px;
+  height: 45px;
+  border: 2px solid $color-bright-orange;
+  border-radius: 22.5px;
+  text-align: center;
+  font-family: $font-main;
+  font-size: 20px;
+
+  /*transición de color y fondo*/
+  transition: background-color 1s ease, color 1s ease;
+
+  @media all and (min-width: 768px) {
+    width: 91px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 160px;
+  }
+
+  & a {
+    color: $color-bright-orange; /*color del texto*/
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-bright-orange;
+    & a {
+      color: $color-black; /*cambiar tmb color texto*/
+    }
+  }
+}
+
+/*BOTÓN SECCIÓN REASONS*/
+.main__reasons__button {
+  font-size: 20px;
+  font-family: $font-main;
+  color: $color-white;
+  background-color: $color-bright-orange;
+  width: 184px;
+  height: 45px;
+  line-height: 2.25;
+  border-radius: 22.5px;
+  text-align: center;
+
+  /*Efecto de subrayado con una fonde de 2 px de alto*/
+  background-image: linear-gradient(
+    $color-white,
+    $color-white
+  ); /*pinta la linea. no actua el gradiente*/
+  background-position: 50% 70%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: box-shadow 0.5s ease, background-size 0.5s ease;
+
+  /*hover*/
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 16px #0271bc;
+    background-size: 70% 2px;
+  }
+
+  /*mediaqueries del botón*/
+  @media all and (min-width: 768px) {
+    grid-area: button;
+    width: 210px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 255px;
   }
 }
 
@@ -27,27 +103,27 @@
   position: absolute;
   left: calc(50% - 22px);
   top: -22px;
+
+  /*LLAMADA AL EFECTO ANIMACIÓN*/
   animation-name: botiboti;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+
+/*AL EFECTO ANIMACIÓN*/
 @keyframes botiboti {
   0% {
-    box-shadow: 0 2px 4px 0 $color-black-50;
-    top: -22px;
+    box-shadow: 0 2px 4px 0 $color-black-50; /*pequeña sombra inicial*/
+    top: -22px; /*Posición inicial en el footer. */
   }
-  40% {
-    box-shadow: 0 2px 20px 0 $color-black-50;
-    top: -32px;
-  }
-
-  70% {
-    box-shadow: 0 2px 40px 0 $color-black-50;
+  50% {
+    box-shadow: 0 2px 40px 0 $color-black-50; /*máximo de sombra*/
+    top: -32px; /*sube*/
   }
 
   100% {
-    box-shadow: 0 2px 4px 0 $color-black-50;
-    top: -22px;
+    box-shadow: 0 2px 4px 0 $color-black-50; /* disminuye d nuevo a tamaño inicial*/
+    top: -22px; /*vuelve a posición inicial*/
   }
 }
