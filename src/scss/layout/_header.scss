@@ -1,90 +1,11 @@
-.header {
-  background-image: url("../images/cover.jpg"),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, #cccccc);
-  background-position: top center;
-  background-size: cover;
-  background-blend-mode: multiply;
-  height: 100vh;
+.header__menu-icon {
+  width: 44px;
+  height: 44px;
+  background-color: $color-cerulean;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-
-  overflow: hidden; /*para el efecto en 768*/
-
-  &__title {
-    font-family: $font-titles;
-    font-size: 42px;
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-    text-align: center;
-    color: $color-white;
-    line-height: 1.31;
-    animation-duration: 2s;
-    animation-name: intro;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-
-    @media all and (min-width: 768px) {
-      font-size: 80px;
-      line-height: 1.33;
-      max-width: 690px;
-    }
-    @media all and (min-width: 1200px) {
-      font-size: 100px;
-      max-width: 730px;
-    }
-
-    @keyframes intro {
-      from {
-        transform: scale(10) rotate(-150deg);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-  }
-  &__text {
-    font-family: $font-main;
-    font-size: 16px;
-    // font-weight: normal; quería quitar el bold por defecto del h3 pero no se nota dif con esta tipo
-    color: $color-white;
-    text-align: center;
-    padding-top: 10px;
-    @media all and (min-width: 768px) {
-      font-size: 24px;
-    }
-  }
-
-  &__button {
-    background-color: $color-white;
-    background-image: url(../images/ico-scroll-down.svg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 45px;
-    height: 45px;
-    min-height: 45px; /* para altura pequeñas se deforma*/
-    border-radius: 25px;
-    margin: 45px 0 53px 0;
-    @media all and (min-width: 768px) {
-      margin: 30px 0 45px 0;
-    }
-    @media all and (min-width: 1200px) {
-      margin-bottom: 13px;
-    }
-  }
-  &__menu-icon {
-    width: 44px;
-    height: 44px;
-    background-color: $color-cerulean;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0%;
-    left: 0;
-  }
+  position: fixed;
+  top: 0%;
+  left: 0;
 }

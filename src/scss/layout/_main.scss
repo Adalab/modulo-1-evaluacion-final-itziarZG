@@ -1,14 +1,3 @@
-.uppercase {
-  text-transform: uppercase;
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-.links {
-  text-decoration: none;
-  line-height: 45px;
-  color: white;
-}
+@import "./main-hero";
 @import "./main-tips";
 @import "./main-reasons.scss";
