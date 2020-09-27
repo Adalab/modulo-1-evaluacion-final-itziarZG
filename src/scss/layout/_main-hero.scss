@@ -6,29 +6,35 @@
   background-size: cover;
   background-blend-mode: multiply; /* para el gradiente*/
   height: 100vh; /*Petición que ocupe todo el alto de pantalla*/
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /*item parte baja de la imagen*/
-  align-items: center;
+
+  & .page-wrapper {
+    /*específicos de este contenendor "padre"*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /*item parte baja de la imagen*/
+    align-items: center;
+  }
 
   /*título*/
   &__title {
     font-family: $font-titles;
-    font-size: 42px;
+    font-size: calc(2.625em + 1vw); /*equivale a 42px a 320*/
     text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
     font-weight: bold;
     text-align: center;
     color: $color-white;
     line-height: 1.31;
+    max-width: 6.9em;
 
     @media all and (min-width: 768px) {
-      font-size: 80px;
+      font-size: calc(5em + 1vw); /*80px*/
       line-height: 1.33;
-      max-width: 690px;
+      width: 6.9em;
     }
     @media all and (min-width: 1200px) {
-      font-size: 100px;
-      max-width: 730px;
+      font-size: 6.25em; /*100px*/
+      max-width: 61%;
     }
   }
 
