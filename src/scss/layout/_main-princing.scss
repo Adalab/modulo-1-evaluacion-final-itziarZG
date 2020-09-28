@@ -1,0 +1,33 @@
+.princing {
+  background-color: $color-cerulean;
+  color: $color-white;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+
+  @media all and (min-width: 768px) {
+    padding: 0 30px;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title title" "item1 item2";
+  }
+  &__title {
+    @media all and (min-width: 768px) {
+      grid-area: title;
+      text-align: center;
+    }
+  }
+  &__item1 {
+    @media all and (min-width: 768px) {
+      grid-area: item1;
+      text-align: center;
+    }
+  }
+  &__item2 {
+    @media all and (min-width: 768px) {
+      grid-area: item2;
+      text-align: center;
+    }
+  }
+}
