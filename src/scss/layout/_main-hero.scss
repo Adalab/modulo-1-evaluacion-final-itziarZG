@@ -2,7 +2,7 @@
   /*imagen de fondo con gradiente desde abajo*/
   background-image: url("../images/cover.jpg"),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 25%, #cccccc);
-  background-position: top center;
+  background-position: center center;
   background-size: cover;
   background-blend-mode: multiply; /* para el gradiente*/
   height: 100vh; /*Petición que ocupe todo el alto de pantalla*/
